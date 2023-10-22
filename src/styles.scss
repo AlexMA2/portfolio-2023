@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Baloo 2";
+  font-weight: bold;
+  src: url("./assets/fonts/Baloo2-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Baloo 2";
+  font-weight: 800; /* Extrabold weight */
+  src: url("./assets/fonts/Baloo2-Extrabold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Baloo 2";
+  font-weight: 500; /* Medium weight */
+  src: url("./assets/fonts/Baloo2-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Baloo 2";
+  font-weight: normal; /* Regular weight */
+  src: url("./assets/fonts/Baloo2-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Baloo 2";
+  font-weight: 600; /* Semibold weight */
+  src: url("./assets/fonts/Baloo2-Semibold.ttf") format("truetype");
+}
+
+* {
+  font-family: "Baloo 2", sans-serif;
+}
+
+.ax-link {
+  background-color: theme("colors.yellow");
+  border: 2px solid #000000;
+  border-radius: 16px;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 5rem;
+  text-decoration: none;
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
