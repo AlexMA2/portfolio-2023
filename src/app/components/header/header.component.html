@@ -1,5 +1,8 @@
 <header class="flex w-full justify-center items-center my-4 relative">
-    <button class="left-4 top-0 absolute cursor-pointer animate-rotate">
+    <button
+        axRipple
+        class="left-4 top-0 absolute cursor-pointer animate-rotate rounded-full p-2"
+    >
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -16,6 +19,7 @@
         class="flex flex-row justify-around items-center w-full relative max-w-7xl"
     >
         <a
+            axRipple
             class="ax-link relative"
             (click)="setActive('about')"
             routerLink="/home"
