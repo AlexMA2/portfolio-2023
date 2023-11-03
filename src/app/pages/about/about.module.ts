@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ComponentsModule } from 'src/app/components/components.module';
-import { DirectivesModule } from 'src/app/directives/directives.module';
 
 const routes: Routes = [
     {
@@ -16,11 +15,6 @@ const routes: Routes = [
 
 @NgModule({
     declarations: [AboutComponent],
-    imports: [
-        CommonModule,
-        ComponentsModule,
-        DirectivesModule,
-        RouterModule.forChild(routes),
-    ],
+    imports: [CommonModule, ComponentsModule, RouterModule.forChild(routes)],
 })
 export class AboutModule {}

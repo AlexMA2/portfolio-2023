@@ -51,12 +51,15 @@
 }
 
 .ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.5);
-    transform: scale(0);
-    animation: ripple 0.6s linear;
-    pointer-events: none;
+    background-color: inherit radial-gradient(circle, transparent 1%, #000000 1%) center/15000%;
+    background-position: center;
+    transition: background ease-in 0.8s;
+}
+
+.ripple:active {
+    background-color: #ddd;
+    background-size: 100%;
+    transition: background 0s;
 }
 
 @keyframes ripple {
