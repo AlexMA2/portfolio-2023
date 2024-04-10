@@ -10,6 +10,7 @@ module.exports = {
             green: "#B6DEA2",
             purple: "#7189FF",
             primary: "#FFF2E8",
+            white: "#FFFFFF",
         },
         textColor: {
             primary: "#000000",
@@ -24,6 +25,12 @@ module.exports = {
             },
             animation: {
                 rotate: "rotate 10s linear infinite",
+            },
+            backgroundImage: {
+                "shapes-pattern": "url('/assets/shapes/Shapes.png')",
+            },
+            boxShadow: {
+                neobrutalism: "5px 5px 0px 0px rgba(0, 0, 0, 1);",
             },
         },
     },

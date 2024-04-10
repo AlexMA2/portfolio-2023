@@ -1,9 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'ax-about',
-  templateUrl: './about.component.html'
+    selector: 'ax-about',
+    templateUrl: './about.component.html',
 })
-export class AboutComponent {
-
-}
+export class AboutComponent {}
