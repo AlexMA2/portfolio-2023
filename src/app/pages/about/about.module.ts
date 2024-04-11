@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
     {
@@ -15,6 +16,11 @@ const routes: Routes = [
 
 @NgModule({
     declarations: [AboutComponent],
-    imports: [CommonModule, ComponentsModule, RouterModule.forChild(routes)],
+    imports: [
+        CommonModule,
+        ComponentsModule,
+        TranslateModule,
+        RouterModule.forChild(routes),
+    ],
 })
 export class AboutModule {}

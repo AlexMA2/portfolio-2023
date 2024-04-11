@@ -44,27 +44,8 @@
     color: #000000;
     font-size: 1rem;
     font-weight: bold;
-    padding: 0.5rem 5rem;
+    padding: 0.5rem 1rem;
     text-decoration: none;
     box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
     cursor: pointer;
-}
-
-.ripple {
-    background-color: inherit radial-gradient(circle, transparent 1%, #000000 1%) center/15000%;
-    background-position: center;
-    transition: background ease-in 0.8s;
-}
-
-.ripple:active {
-    background-color: #ddd;
-    background-size: 100%;
-    transition: background 0s;
-}
-
-@keyframes ripple {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
 }

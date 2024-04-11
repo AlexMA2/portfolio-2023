@@ -1,6 +1,6 @@
 <header class="flex w-full justify-center items-center my-4 relative">
     <button
-        class="left-4 top-0 absolute cursor-pointer animate-rotate rounded-full p-2 ripple"
+        class="left-4 top-0 absolute cursor-pointer animate-rotate rounded-full p-2"
     >
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -15,18 +15,31 @@
         </svg>
     </button>
     <nav
-        class="flex flex-row justify-around items-center w-full relative max-w-7xl"
+        class="flex flex-row justify-around items-center relative w-full max-w-7xl ml-20 gap-4 mr-4"
     >
         <a
-            axRipple
-            class="ax-link relative"
+            class="ax-link relative flex-1 max-w-xs text-center text-sm sm:text-base"
             (click)="setActive('about')"
             routerLink="/home"
         >
-            About me
+            <span class="sm:inline-flex hidden">
+                {{ "about_me.label" | translate }}
+            </span>
+            <svg
+                class="sm:hidden inline-flex"
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 16 16"
+            >
+                <path
+                    fill="currentColor"
+                    d="M11.5 8A1.5 1.5 0 0 1 13 9.5v.5c0 1.971-1.86 4-5 4s-5-2.029-5-4v-.5A1.5 1.5 0 0 1 4.5 8zM8 1.5A2.75 2.75 0 1 1 8 7a2.75 2.75 0 0 1 0-5.5"
+                />
+            </svg>
             <img
                 class="absolute -top-1/2 left-1/2 -translate-x-1/2 h-20"
-                src="../../../assets/shapes/Highlight.svg"
+                src="./assets/shapes/Highlight.svg"
                 alt="highlight"
                 [ngClass]="{
                     'hidden' : active !== 'about',
@@ -34,14 +47,29 @@
             />
         </a>
         <a
-            class="ax-link relative"
+            class="ax-link relative flex-1 max-w-xs text-center text-sm sm:text-base"
             (click)="setActive('skills')"
             routerLink="/about"
         >
-            Skills and Projects
+            <span class="sm:inline-flex hidden">
+                {{ "skills_projects.label" | translate }}
+            </span>
+            <svg
+                class="sm:hidden inline-flex"
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 16 16"
+            >
+                <path
+                    fill="currentColor"
+                    d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"
+                />
+            </svg>
+
             <img
                 class="absolute -top-1/2 left-1/2 -translate-x-1/2 h-20"
-                src="../../../assets/shapes/Highlight.svg"
+                src="./assets/shapes/Highlight.svg"
                 alt="highlight"
                 [ngClass]="{
                 'hidden' : active !== 'skills',
@@ -49,14 +77,30 @@
             />
         </a>
         <a
-            class="ax-link relative"
+            class="ax-link relative flex-1 max-w-xs text-center text-sm sm:text-base"
             (click)="setActive('contact')"
             routerLink="/contact"
         >
-            Contact me
+            <span class="sm:inline-flex hidden">
+                {{ "contact.label" | translate }}
+            </span>
+
+            <svg
+                class="sm:hidden inline-flex"
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 26 26"
+            >
+                <path
+                    fill="currentColor"
+                    d="M22.386 18.026c-1.548-1.324-3.119-2.126-4.648-.804l-.913.799c-.668.58-1.91 3.29-6.712-2.234c-4.801-5.517-1.944-6.376-1.275-6.951l.918-.8c1.521-1.325.947-2.993-.15-4.71l-.662-1.04C7.842.573 6.642-.552 5.117.771l-.824.72c-.674.491-2.558 2.087-3.015 5.119c-.55 3.638 1.185 7.804 5.16 12.375c3.97 4.573 7.857 6.87 11.539 6.83c3.06-.033 4.908-1.675 5.486-2.272l.827-.721c1.521-1.322.576-2.668-.973-3.995z"
+                />
+            </svg>
+
             <img
                 class="absolute -top-1/2 left-1/2 -translate-x-1/2 h-20"
-                src="../../../assets/shapes/Highlight.svg"
+                src="./assets/shapes/Highlight.svg"
                 alt="highlight"
                 [ngClass]="{
                 'hidden' : active !== 'contact',

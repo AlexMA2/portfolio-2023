@@ -1,3 +1,16 @@
 {
-    "name": "test"
+    "about_me": {
+        "label": "About me",
+        "first": "Hi!. My name is",
+        "second": "I'm a ",
+        "third": " specialized in"
+    },
+    "skills_projects": {
+        "label": "Skills and Projects"
+    },
+    "contact": {
+        "label": "Contact me"
+    },
+    "software_engineer": "Software Engineer",
+    "web_development": "FullStack Web Development"
 }
