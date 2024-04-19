@@ -12,5 +12,18 @@
         "label": "Contact me"
     },
     "software_engineer": "Software Engineer",
-    "web_development": "FullStack Web Development"
+    "web_development": "FullStack Web Development",
+    "project": {
+        "personal": "Personal Project",
+        "about": "About the project"
+    },
+    "technologies_used": {
+        "label": "Technologies used"
+    },
+    "source_code": {
+        "label": "Source code"
+    },
+    "deployment": {
+        "label": "Deployment"
+    }
 }
