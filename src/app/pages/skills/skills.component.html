@@ -1,1 +1,15 @@
-<p>skills works!</p>
+<div class="flex flex-row justify-center gap-4 w-full px-4 my-2">
+    <ax-tech-tag
+        class="pointer"
+        *ngFor="let skill of skills"
+        [tech]="skill"
+        [color]="selectedSkill === skill ? 'primary' : 'transparent'"
+    ></ax-tech-tag>
+</div>
+
+<div class="grid grid-cols-2 gap-4 mx-4">
+    <ax-experience-card
+        *ngFor="let experience of experiences"
+        [experience]="experience"
+    ></ax-experience-card>
+</div>

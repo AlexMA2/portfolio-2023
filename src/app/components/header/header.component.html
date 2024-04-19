@@ -19,8 +19,7 @@
     >
         <a
             class="ax-link relative flex-1 max-w-xs text-center text-sm sm:text-base"
-            (click)="setActive('about')"
-            routerLink="/home"
+            (click)="setActive('about-me')"
         >
             <span class="sm:inline-flex hidden">
                 {{ "about_me.label" | translate }}
@@ -42,14 +41,13 @@
                 src="./assets/shapes/Highlight.svg"
                 alt="highlight"
                 [ngClass]="{
-                    'hidden' : active !== 'about',
+                    'hidden' : active !== 'about-me',
                 }"
             />
         </a>
         <a
             class="ax-link relative flex-1 max-w-xs text-center text-sm sm:text-base"
-            (click)="setActive('skills')"
-            routerLink="/about"
+            (click)="setActive('skills-projects')"
         >
             <span class="sm:inline-flex hidden">
                 {{ "skills_projects.label" | translate }}
@@ -72,14 +70,13 @@
                 src="./assets/shapes/Highlight.svg"
                 alt="highlight"
                 [ngClass]="{
-                'hidden' : active !== 'skills',
+                'hidden' : active !== 'skills-projects',
             }"
             />
         </a>
         <a
             class="ax-link relative flex-1 max-w-xs text-center text-sm sm:text-base"
             (click)="setActive('contact')"
-            routerLink="/contact"
         >
             <span class="sm:inline-flex hidden">
                 {{ "contact.label" | translate }}
