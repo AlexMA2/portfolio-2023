@@ -2,5 +2,21 @@
     class="flex flex-col flex-auto w-full min-w-0 min-h-screen overflow-y-auto bg-primary-50"
 >
     <ax-header></ax-header>
-    <router-outlet></router-outlet>
+
+    <div
+        *ngIf="loadingPage"
+        class="flex flex-col justify-center items-center h-full w-full"
+    >
+        <img
+            src="./assets/images/loading.svg"
+            alt="A men sit down under a tree waiting"
+            width="300"
+            height="300"
+        />
+        <p class="text-2xl font-bold text-work-500">
+            {{ "loading.label" | translate }}...
+        </p>
+    </div>
+
+    <router-outlet *ngIf="!loadingPage"></router-outlet>
 </div>

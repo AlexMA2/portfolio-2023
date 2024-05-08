@@ -1,8 +1,8 @@
 <article
-    class="shadow-neobrutalism bg-white rounded-xl py-6 px-8 border-2 border-black-950 flex flex-col gap-6"
+    class="shadow-neobrutalism bg-white rounded-xl py-6 px-8 border-2 border-black-950 flex flex-col gap-6 h-full"
 >
-    <header class="flex flex-row items-center justify-between">
-        <div class="flex flex-row gap-2 items-center justify-start">
+    <header class="flex flex-row items-center flex-wrap justify-between">
+        <div class="flex flex-row flex-wrap gap-2 items-center justify-start">
             <h1 class="font-bold text-xl">{{ experience.title }}</h1>
             <span
                 *ngIf="experience.type === 'personal'"
@@ -18,7 +18,7 @@
             </span>
         </div>
         <p class="truncate">
-            {{ experience.startDate }} - {{ experience.endDate }}
+            {{ experience | rangeDate }}
         </p>
     </header>
 
@@ -58,7 +58,7 @@
                         [href]="experience.about.sourceCode"
                         rel="noreferrer"
                         target="_blank"
-                        class="flex flex-row items-center gap-1"
+                        class="flex flex-row items-center gap-1 hover:text-work-700"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@
                     <a
                         *ngIf="experience.about.deployment"
                         [href]="experience.about.deployment"
-                        class="flex flex-row items-center gap-1"
+                        class="flex flex-row items-center gap-1 hover:text-work-700"
                         target="_blank"
                         rel="noreferrer"
                     >

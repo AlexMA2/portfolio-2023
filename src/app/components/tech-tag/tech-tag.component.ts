@@ -13,6 +13,10 @@ export enum TechEnum {
     SQL = 'sql',
     TAILWIND = 'tailwind',
     GRAPHQL = 'graphql',
+    FIREBASE = 'firebase',
+    CYPRESS = 'cypress',
+    JASMINE = 'jasmine',
+    APEXCHART = 'apexchart',
 }
 
 @Component({

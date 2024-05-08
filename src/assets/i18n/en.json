@@ -25,5 +25,11 @@
     },
     "deployment": {
         "label": "Deployment"
+    },
+    "work_experience": {
+        "label": "Work Experience"
+    },
+    "loading": {
+        "label": "Loading"
     }
 }
