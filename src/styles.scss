@@ -3,34 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: "Baloo 2";
-    font-weight: bold;
-    src: url("./assets/fonts/Baloo2-Bold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Baloo 2";
-    font-weight: 800; /* Extrabold weight */
-    src: url("./assets/fonts/Baloo2-Extrabold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Baloo 2";
-    font-weight: 500; /* Medium weight */
-    src: url("./assets/fonts/Baloo2-Medium.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Baloo 2";
-    font-weight: normal; /* Regular weight */
-    src: url("./assets/fonts/Baloo2-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Baloo 2";
-    font-weight: 600; /* Semibold weight */
-    src: url("./assets/fonts/Baloo2-Semibold.ttf") format("truetype");
+.baloo-2-regular {
+    font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
