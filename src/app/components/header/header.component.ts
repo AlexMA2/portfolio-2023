@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
             window.location.pathname,
             path
         );
-        this.active = path;
+        this.active = path || 'about-me';
     }
 
     setActive(active: 'about-me' | 'contact' | 'skills-projects') {

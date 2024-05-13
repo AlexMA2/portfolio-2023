@@ -35,7 +35,11 @@
                 *ngFor="let i of experience.technologiesUsed"
                 class="flex flex-col justify-start items-center"
             >
-                <ax-tech-tag [size]="'sm'" [tech]="i.technology"></ax-tech-tag>
+                <ax-tech-tag
+                    [color]="'none'"
+                    [size]="'sm'"
+                    [tech]="i.technology"
+                ></ax-tech-tag>
 
                 <p class="text-black-800">
                     {{ i.description }}

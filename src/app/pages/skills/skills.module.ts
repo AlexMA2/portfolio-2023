@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SkillsComponent } from './skills.component';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { RouterModule, Routes } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
     {
@@ -15,6 +16,11 @@ const routes: Routes = [
 
 @NgModule({
     declarations: [SkillsComponent],
-    imports: [CommonModule, ComponentsModule, RouterModule.forChild(routes)],
+    imports: [
+        CommonModule,
+        ComponentsModule,
+        RouterModule.forChild(routes),
+        TranslateModule,
+    ],
 })
 export class SkillsModule {}

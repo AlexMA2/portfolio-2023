@@ -6,7 +6,9 @@
         "third": " specialized in"
     },
     "skills_projects": {
-        "label": "Skills and Projects"
+        "label": "Skills and Projects",
+        "learned_skills": "Learned skills",
+        "projects": "Work experience and personal projects"
     },
     "contact": {
         "label": "Contact me"

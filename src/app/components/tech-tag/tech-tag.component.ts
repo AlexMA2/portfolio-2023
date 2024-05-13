@@ -7,16 +7,15 @@ export enum TechEnum {
     CSS = 'css',
     JAVASCRIPT = 'javascript',
     TYPESCRIPT = 'typescript',
-    NODEJS = 'nodejs',
-    EXPRESS = 'express',
-    MONGODB = 'mongodb',
     SQL = 'sql',
     TAILWIND = 'tailwind',
     GRAPHQL = 'graphql',
     FIREBASE = 'firebase',
     CYPRESS = 'cypress',
+    APOLLO = 'apollo',
     JASMINE = 'jasmine',
     APEXCHART = 'apexchart',
+    NET = '.net',
 }
 
 @Component({
@@ -26,5 +25,6 @@ export enum TechEnum {
 export class TechTagComponent {
     @Input() tech: TechEnum = TechEnum.ANGULAR;
     @Input() size: 'sm' | 'md' | 'lg' = 'md';
-    @Input() color: 'primary' | 'secondary' | 'transparent' = 'transparent';
+    @Input() color: 'primary' | 'secondary' | 'transparent' | 'none' =
+        'transparent';
 }

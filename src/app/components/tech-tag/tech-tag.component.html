@@ -9,6 +9,7 @@
         'bg-secondary-300 dark:bg-secondary-700 text-secondary-900 dark:text-secondary-100':
             color === 'secondary',
             'bg-transparent dark:bg-transparent text-slate-700 dark:text-slate-300 hover:bg-black-950/20': color === 'transparent',
+            'bg-transparant dark:bg-transparent text-slate-700 dark:text-slate-30': color === 'none',
     }"
 >
     <ng-container [ngSwitch]="tech.toString()">
@@ -39,11 +40,23 @@
         <ng-container *ngSwitchCase="'sql'">
             <ng-container *ngTemplateOutlet="sql"></ng-container>
         </ng-container>
-        <ng-container *ngSwitchCase="'net'">
+        <ng-container *ngSwitchCase="'.net'">
             <ng-container *ngTemplateOutlet="net"></ng-container>
         </ng-container>
         <ng-container *ngSwitchCase="'firebase'">
             <ng-container *ngTemplateOutlet="firebase"></ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="'cypress'">
+            <ng-container *ngTemplateOutlet="cypress"></ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="'jasmine'">
+            <ng-container *ngTemplateOutlet="jasmine"></ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="'apexchart'">
+            <ng-container *ngTemplateOutlet="apexchart"></ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="'apollo'">
+            <ng-container *ngTemplateOutlet="apollo"></ng-container>
         </ng-container>
     </ng-container>
     {{ tech.toString() }}
@@ -295,6 +308,105 @@
         <path
             fill="#eeab37"
             d="M16.912 29.6a1.927 1.927 0 0 1-1.878 0l-9.158-5.078l-.076.078l9.233 5.155a1.927 1.927 0 0 0 1.878 0l9.289-5.178l-.023-.14Z"
+        />
+    </svg>
+</ng-template>
+
+<ng-template #cypress
+    ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        viewBox="0 0 32 32"
+    >
+        <defs>
+            <linearGradient
+                id="vscodeIconsFileTypeLightCypress0"
+                x1="-232.595"
+                x2="-232.531"
+                y1="266.492"
+                y2="266.492"
+                gradientTransform="scale(-271.077 271.077)rotate(76.525 52.57 280.658)"
+                gradientUnits="userSpaceOnUse"
+            >
+                <stop offset="0" stop-color="#58d09e" />
+                <stop offset="1" stop-color="#d2d2d2" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient
+                id="vscodeIconsFileTypeLightCypress1"
+                x1="-232.6"
+                x2="-232.537"
+                y1="267.638"
+                y2="267.638"
+                gradientTransform="scale(250.185 -250.185)rotate(-30.831 -601.76 -288.04)"
+                gradientUnits="userSpaceOnUse"
+            >
+                <stop offset="0" stop-color="#58d09e" />
+                <stop offset="1" />
+            </linearGradient>
+        </defs>
+        <path
+            fill="#fafafa"
+            d="M15.5 2.071A13.938 13.938 0 1 1 2.076 16.495A13.95 13.95 0 0 1 15.5 2.071"
+        />
+        <path
+            d="m23.471 11.58l-2.624 6.584l-2.64-6.584h-2.16l3.7 8.986l-2.632 6.334l1.885.376l6.508-15.7h-2.037Z"
+        />
+        <path
+            d="M11.942 13.245a2.6 2.6 0 0 1 2.448 1.592l.036.079l1.841-.62l-.04-.094a4.53 4.53 0 0 0-4.285-2.792a4.6 4.6 0 0 0-3.372 1.318A4.42 4.42 0 0 0 7.2 16.02a4.4 4.4 0 0 0 1.369 3.28a4.6 4.6 0 0 0 3.372 1.319a4.53 4.53 0 0 0 4.285-2.792l.04-.094l-1.844-.621l-.035.083a2.55 2.55 0 0 1-2.446 1.588a2.6 2.6 0 0 1-1.92-.786a2.72 2.72 0 0 1-.778-1.97a2.76 2.76 0 0 1 .778-1.988a2.58 2.58 0 0 1 1.92-.789Z"
+        />
+        <path
+            fill="#58d09e"
+            d="M2.961 19.547a13.4 13.4 0 0 1-.482-3.559a13.52 13.52 0 0 1 8.682-12.533l.681 1.745a11.64 11.64 0 0 0-7.473 10.788a11.5 11.5 0 0 0 .414 3.062Z"
+        />
+        <path
+            fill="#58d09e"
+            d="M11.07 3.5a13.61 13.61 0 0 1 16.992 6.4l-1.681.855a11.715 11.715 0 0 0-14.623-5.512z"
+        />
+        <path
+            fill="url(#vscodeIconsFileTypeLightCypress0)"
+            d="M22.225 25.756a11.567 11.567 0 0 0 4.088-15.149l1.675-.866a13.426 13.426 0 0 1-4.748 17.6l-1.015-1.581Z"
+        />
+        <path
+            fill="url(#vscodeIconsFileTypeLightCypress1)"
+            d="m17.5 25.949l-.46 1.105a.61.61 0 0 1-.536.377q-.233.01-.471.01a11.736 11.736 0 0 1-11.4-9.009l-1.843.413a13.46 13.46 0 0 0 4.71 7.482a13.7 13.7 0 0 0 8.51 2.987h.028c.182 0 .361 0 .542-.012a2.5 2.5 0 0 0 2.206-1.536l.6-1.444z"
+        />
+    </svg>
+</ng-template>
+<ng-template #jasmine
+    ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1.01em"
+        height="1em"
+        viewBox="0 0 256 255"
+    >
+        <g fill="#8a4182">
+            <path
+                d="M118.267 105.334h19.795l4.918-6.733V45.874h-29.627v52.733zm-12.758 23.517l6.115-18.717l-4.919-6.73L56.271 87.11l-9.154 28.016l50.44 16.296zm18.551 19.336l-16.012-11.57l-7.96 2.572l-31.168 42.66l23.968 17.313l31.172-42.66zm24.225-11.573l-16.016 11.57l.004 8.32l31.169 42.658l23.969-17.314l-31.175-42.663zm-3.583-26.484l6.118 18.72l7.958 2.569l50.435-16.293l-9.157-28.018l-50.436 16.297z"
+            />
+            <path
+                d="M128.17.106C57.71.106.384 57.1.384 127.152c0 70.078 57.326 127.087 127.788 127.087c70.454 0 127.774-57.009 127.774-127.087c0-70.053-57.32-127.046-127.774-127.046m0 25.725c56.27 0 101.9 45.357 101.9 101.32c0 55.983-45.63 101.36-101.9 101.36c-56.287 0-101.912-45.377-101.912-101.36c0-55.963 45.625-101.32 101.913-101.32"
+            />
+            <path
+                d="m205.565 155.391l-38.338-12.387l2.535-7.765l38.338 12.387zM156.67 94.19l-6.645-4.798l23.693-32.429l6.644 4.799zm-56.598-.295l-23.69-32.43l6.644-4.798l23.69 32.428zm-49.464 61.012l-2.536-7.765l38.334-12.382l2.537 7.765zm73.199 53.252h8.211v-40.085h-8.21z"
+            />
+        </g>
+    </svg>
+</ng-template>
+<ng-template #apexchart>
+    <img width="24" height="24" src="./assets/tech-icons/apexchart.svg" />
+</ng-template>
+
+<ng-template #apollo>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="0.88em"
+        height="1em"
+        viewBox="0 0 448 512"
+    >
+        <path
+            fill="currentColor"
+            d="m252.172 187.27l-30.104 84.534h46.205l12.777 36.754h-70.183l-12.076 33.254h-46.555l74.383-196.547h51.456l74.208 196.722h-46.555zm192.694 232.424c10.037-12.68-6.789-25.955-16.134-13.855c-144.305 181.855-451.24 52.942-401.227-204.462C67.01 32.365 266.96-33.69 396.57 73.115c-4.05 11.377-.278 25.18 11.34 32.014c17.23 10.134 38.883-2.603 38.883-22.871c0-18.926-18.878-31.278-35.407-24.582C270.035-60.523 50.563 11.409 7.319 196.416C-51.527 443.714 258.2 632.34 444.866 419.695"
         />
     </svg>
 </ng-template>

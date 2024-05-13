@@ -1,19 +1,37 @@
-<div
-    class="flex flex-row justify-center gap-4 w-full px-4 my-2 overflow-x-auto"
->
-    <ax-tech-tag
-        class="cursor-pointer"
-        *ngFor="let skill of skills"
-        [tech]="skill"
-        [color]="selectedSkill === skill ? 'primary' : 'transparent'"
-        (click)="selectSkill(skill)"
-    ></ax-tech-tag>
-</div>
+<main class="gap-6 flex flex-col justify-center items-center w-full">
+    <div class="border-t-2 border-black-950 h-1 relative w-[95%] my-2">
+        <p
+            class="px-2 bg-primary-50 -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 absolute font-bold"
+        >
+            {{ "skills_projects.learned_skills" | translate }}
+        </p>
+    </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-6 auto-rows-auto mb-4">
-    <ax-experience-card
-        class="h-full"
-        *ngFor="let experience of filteredExperiences"
-        [experience]="experience"
-    ></ax-experience-card>
-</div>
+    <div
+        class="flex flex-row justify-center gap-4 w-full px-4 overflow-x-auto flex-wrap"
+    >
+        <ax-tech-tag
+            class="cursor-pointer"
+            *ngFor="let skill of skills"
+            [tech]="skill"
+            [color]="selectedSkill === skill ? 'primary' : 'transparent'"
+            (click)="selectSkill(skill)"
+        ></ax-tech-tag>
+    </div>
+
+    <div class="border-t-2 border-black-950 h-1 relative w-[95%] my-2">
+        <p
+            class="px-2 bg-primary-50 -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 absolute font-bold"
+        >
+            {{ "skills_projects.projects" | translate }}
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-6 auto-rows-auto mb-4">
+        <ax-experience-card
+            class="h-full"
+            *ngFor="let experience of filteredExperiences"
+            [experience]="experience"
+        ></ax-experience-card>
+    </div>
+</main>
