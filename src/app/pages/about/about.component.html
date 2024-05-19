@@ -2,37 +2,45 @@
 <div
     class="flex justify-center items-start w-full h-[90vh] flex-1 bg-shapes-pattern-rotate md:bg-shapes-pattern bg-center bg-contain bg-no-repeat"
 >
-    <div class="flex justify-center h-30 items-center z-10 relative">
-        <div
-            #boxMessage
-            class="border-2 inline-flex bg-white w-40 h-30 borde-black-950 shadow-neobrutalism rounded-2xl p-4 text-center min-w-[600px] z-50"
-        >
-            <p class="text-4xl font-light leading-10">
-                {{ "about_me.first" | translate }}
+    <div
+        class="flex flex-col lg:flex-row justify-center h-30 items-center relative mt-10 lg:mt-0"
+    >
+        <div>
+            <!-- Message box -->
+            <div
+                #boxMessage
+                class="border-2 relative inline-flex bg-white w-40 h-30 borde-black-950 shadow-neobrutalism rounded-2xl p-4 text-center min-w-[300px] sm:min-w-[600px] z-20"
+            >
+                <p class="text-2xl sm:text-4xl font-light leading-10">
+                    {{ "about_me.first" | translate }}
 
-                <span class="font-medium text-primary-700">Alex Mamani.</span>
+                    <span class="font-medium text-primary-700"
+                        >Alex Mamani.</span
+                    >
 
-                {{ "about_me.second" | translate }}
+                    {{ "about_me.second" | translate }}
 
-                <span class="font-medium text-primary-700">
-                    {{ "software_engineer" | translate }}
-                </span>
+                    <span class="font-medium text-primary-700">
+                        {{ "software_engineer" | translate }}
+                    </span>
 
-                {{ "about_me.third" | translate }}
+                    {{ "about_me.third" | translate }}
 
-                <span class="font-medium text-primary-700">{{
-                    "web_development" | translate
-                }}</span>
-            </p>
+                    <span class="font-medium text-primary-700">{{
+                        "web_development" | translate
+                    }}</span>
+                </p>
+            </div>
+            <!-- Arrow -->
+            <div
+                class="absolute z-10 w-0 h-0 border-l-[25px] border-l-[transparent] border-r-[25px] border-r-[transparent] border-b-[100px] border-b-[black] rotate-180 lg:rotate-[135deg]"
+                [style.top]="arrowPosition.top + 'px'"
+                [style.left]="arrowPosition.left + 'px'"
+            ></div>
         </div>
-
+        <!-- Photo -->
         <div
-            class="absolute z-40 w-0 h-0 border-l-[25px] border-l-[transparent] border-r-[25px] border-r-[transparent] border-b-[100px] border-b-[black] rotate-[135deg]"
-            [style.top]="arrowPosition.top + 'px'"
-            [style.left]="arrowPosition.left + 'px'"
-        ></div>
-        <div
-            class="translate-y-48 flex justify-center items-center rounded-full shadow-neobrutalism border-2 border-black-950 aspect-square w-[400px] h-[400px] object-contain"
+            class="translate-y-20 lg:translate-y-48 z-0 flex justify-center items-center rounded-full shadow-neobrutalism border-2 border-black-950 aspect-square w-[400px] h-[400px] object-contain"
         >
             <img
                 class="object-cover rounded-full w-full h-full"

@@ -23,16 +23,30 @@ export class AboutComponent implements AfterViewInit {
     constructor() {}
 
     ngAfterViewInit(): void {
+        setTimeout(() => {
+            this.arrowPosition = this.computeTopLeft();
+        });
+    }
+
+    private computeTopLeft(): Record<'top' | 'left', number> {
         const boxMessage =
             this.boxMessage.nativeElement.getBoundingClientRect();
 
-        const left = boxMessage.width - 2;
-        const top = boxMessage.bottom - boxMessage.height + 2;
+        console.log(
+            '🚀 ~ AboutComponent ~ computeTopLeft ~ indow.innerWidth:',
+            window.innerWidth,
+            boxMessage
+        );
+        if (window.innerWidth < 1025) {
+            return {
+                top: boxMessage.bottom - boxMessage.height + 16,
+                left: boxMessage.width / 2 - 25,
+            };
+        }
 
-        setTimeout(() => {
-            this.arrowPosition.left = left;
-            this.arrowPosition.top = top;
-            this.arrowPosition = { ...this.arrowPosition };
-        });
+        return {
+            top: boxMessage.bottom - boxMessage.height + 2,
+            left: boxMessage.width - 2,
+        };
     }
 }
