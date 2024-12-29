@@ -33,6 +33,7 @@
             </div>
             <!-- Arrow -->
             <div
+                *ngIf="!loading"
                 class="absolute z-10 w-0 h-0 border-l-[25px] border-l-[transparent] border-r-[25px] border-r-[transparent] border-b-[100px] border-b-[black] rotate-180 lg:rotate-[135deg]"
                 [style.top]="arrowPosition.top + 'px'"
                 [style.left]="arrowPosition.left + 'px'"

@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 interface RangeDate {
     startDate: string;
-    endDate: string;
+    endDate?: string;
 }
 
 @Pipe({
@@ -11,16 +11,26 @@ interface RangeDate {
 })
 export class RangeDatePipe implements PipeTransform {
     transform(value: RangeDate): string {
+        if (!value) return '';
+
         const language = localStorage.getItem('lang');
-        console.log('🚀 ~ RangeDatePipe ~ transform ~ language:', language);
+
         if (!language) return '';
+
+        const clonedValue = { ...value };
+
         const rtf = new Intl.DateTimeFormat(language, {
             year: 'numeric',
             month: 'short',
             day: '2-digit',
         });
-        const start = new Date(value.startDate + 'T00:00:00');
-        const end = new Date(value.endDate + 'T00:00:00');
+        const start = new Date(clonedValue.startDate + 'T00:00:00');
+
+        if (!value.endDate) {
+            clonedValue.endDate = new Date().toISOString().split('T')[0];
+        }
+
+        const end = new Date(clonedValue.endDate + 'T00:00:00');
 
         return `${rtf.format(start)} - ${rtf.format(end)}`;
     }

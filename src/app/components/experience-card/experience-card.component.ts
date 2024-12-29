@@ -7,7 +7,7 @@ export interface Experience {
     technologiesUsed: TechnologyExperience[];
     about: AboutExperience;
     startDate: string;
-    endDate: string;
+    endDate?: string;
 }
 
 export interface TechnologyExperience {
