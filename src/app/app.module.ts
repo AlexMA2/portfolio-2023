@@ -7,6 +7,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
+import { AVAILABLE_LANGUAGES } from './shared/tokens/i18n.tokens';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -28,8 +29,14 @@ export function HttpLoaderFactory(http: HttpClient) {
             defaultLanguage: localStorage.getItem('language') || 'en',
             useDefaultLang: true,
         }),
+        ComponentsModule,
     ],
-    providers: [],
+    providers: [
+        {
+            provide: AVAILABLE_LANGUAGES,
+            useValue: ['en', 'es'],
+        },
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

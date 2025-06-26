@@ -1,0 +1,18 @@
+<div class="flex items-center gap-2 text-sm">
+    <select
+        id="lang"
+        class="border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-800 dark:text-black"
+        [value]="currentLang"
+        (change)="changeLang($event)"
+    >
+        @for ( lang of languageOptions; track $index) {
+        <option [value]="lang.code">
+            <img
+                src="./assets/images/flags/{{ lang.code }}.svg"
+                [alt]="lang.code"
+            />
+            {{ lang.label }}
+        </option>
+        }
+    </select>
+</div>

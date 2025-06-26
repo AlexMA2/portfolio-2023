@@ -1,0 +1,37 @@
+{
+    "about_me": {
+        "label": "Sobre mí",
+        "first": "¡Hola! Mi nombre es",
+        "second": "Soy un",
+        "third": "especializado en"
+    },
+    "skills_projects": {
+        "label": "Habilidades y Proyectos",
+        "learned_skills": "Habilidades aprendidas",
+        "projects": "Experiencia laboral y proyectos personales"
+    },
+    "contact": {
+        "label": "Contáctame"
+    },
+    "software_engineer": "Ingeniero de Software",
+    "web_development": "Desarrollo Web FullStack",
+    "project": {
+        "personal": "Proyecto Personal",
+        "about": "Sobre el proyecto"
+    },
+    "technologies_used": {
+        "label": "Tecnologías utilizadas"
+    },
+    "source_code": {
+        "label": "Código fuente"
+    },
+    "deployment": {
+        "label": "Despliegue"
+    },
+    "work_experience": {
+        "label": "Experiencia Laboral"
+    },
+    "loading": {
+        "label": "Cargando"
+    }
+}
